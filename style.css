@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff0f5; /* Rosa claro de fundo */
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(219, 112, 147, 0.2); /* Sombra rosa */
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #ffd1dc; /* Rosa claro */
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #db7093; /* Rosa médio */
+}
+
+.titulo {
+    color: #c71585; /* Rosa escuro */
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ffd1dc; /* Rosa claro */
+}
+
+h1 {
+    color: #db7093; /* Rosa médio */
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #c71585; /* Rosa escuro */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffd1dc; /* Rosa claro */
+}
+
+.contato p {
+    margin: 8px 0;
+    font-size: 1.1em;
+    color: #db7093; /* Rosa médio */
+}
+
+.status {
+    color: #ff69b4; /* Rosa hot pink */
+    font-style: italic;
+    margin-top: 5px;
+}
+
+ul {
+    list-style-position: inside;
+    margin: 10px 0;
+}
+
+.skills-list, .personal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #db7093; /* Rosa médio */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.personal-list li {
+    background-color: #c71585; /* Rosa escuro */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover, .personal-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+section ul:not(.skills-list):not(.personal-list) li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+section ul:not(.skills-list):not(.personal-list) li::before {
+    content: "♥"; /* Coração em vez de ponto */
+    position: absolute;
+    left: 0;
+    color: #db7093; /* Rosa médio */
+}
+
+/* Estilização adicional para links */
+a {
+    color: #db7093;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c71585;
+}
+
+/* Animação suave ao carregar */
+.container {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills-list li, .personal-list li {
+        font-size: 0.9em;
+    }
+}
+
+/* Cores personalizadas para cada seção ao passar o mouse */
+section:hover {
+    background-color: #fff0f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo especial para o cabeçalho de cada seção */
+section h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Efeito de destaque para informações importantes */
+.contato p:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s ease;
+}
